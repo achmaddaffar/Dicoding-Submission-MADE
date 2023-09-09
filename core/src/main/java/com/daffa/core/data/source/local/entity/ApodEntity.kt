@@ -12,25 +12,25 @@ data class ApodEntity(
     var apodId: String,
 
     @ColumnInfo(name = "date")
-    var date: String,
+    var date: String? = null,
 
     @ColumnInfo(name = "copyright")
-    var copyright: String,
+    var copyright: String? = null,
 
     @ColumnInfo(name = "mediaType")
-    var mediaType: String,
+    var mediaType: String? = null,
 
     @ColumnInfo(name = "hdurl")
     var hdurl: String,
 
     @ColumnInfo(name = "serviceVersion")
-    var serviceVersion: String,
+    var serviceVersion: String? = null,
 
     @ColumnInfo(name = "explanation")
-    var explanation: String,
+    var explanation: String? = null,
 
     @ColumnInfo(name = "title")
-    var title: String,
+    var title: String? = null,
 
     @ColumnInfo(name = "url")
     var url: String,
