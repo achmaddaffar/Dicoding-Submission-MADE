@@ -10,7 +10,6 @@ object DataMapper {
         val apodList = ArrayList<ApodEntity>()
         input.map {
             val apod = ApodEntity(
-                apodId = it.hdurl,
                 date = it.date,
                 copyright = it.copyright,
                 mediaType = it.mediaType,

@@ -1,5 +1,6 @@
 package com.daffa.core.data.source.remote.network
 
+import com.daffa.core.data.source.remote.response.ApodResponseItem
 import com.daffa.core.data.source.remote.response.ListApodResponse
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -10,5 +11,5 @@ interface ApiService {
     suspend fun getList(
         @Query("api_key") apiKey: String,
         @Query("count") count: Int,
-    ): ListApodResponse
+    ): List<ApodResponseItem>
 }

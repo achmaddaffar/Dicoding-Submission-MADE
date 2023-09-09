@@ -18,9 +18,8 @@ class RemoteDataSource(private val apiService: ApiService) {
                 apiKey = Constants.API_KEY,
                 count = Constants.APOD_COUNT
             )
-            val dataArray = response.apodResponse
-            if (dataArray.isNotEmpty()) {
-                emit(ApiResponse.Success(response.apodResponse))
+            if (response.isNotEmpty()) {
+                emit(ApiResponse.Success(response))
             } else {
                 emit(ApiResponse.Empty)
             }

@@ -1,15 +1,14 @@
 package com.daffa.core.data.source.local.entity
 
-import androidx.annotation.NonNull
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "apod")
 data class ApodEntity(
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "apodId")
-    var apodId: String,
+    var apodId: Int= 0,
 
     @ColumnInfo(name = "date")
     var date: String? = null,

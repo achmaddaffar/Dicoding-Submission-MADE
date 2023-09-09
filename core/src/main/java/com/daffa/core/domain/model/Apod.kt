@@ -5,7 +5,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Apod(
-    val apodId: String,
+    val apodId: Int,
     val copyright: String? = null,
     val date: String? = null,
     val explanation: String? = null,
