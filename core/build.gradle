@@ -12,7 +12,6 @@ android {
     compileSdk 33
 
     defaultConfig {
-//        applicationId "com.daffa.core"
         minSdk 28
         targetSdk 33
         versionCode 1
