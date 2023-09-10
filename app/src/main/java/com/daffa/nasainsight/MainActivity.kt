@@ -1,13 +1,13 @@
 package com.daffa.nasainsight
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.daffa.nasainsight.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
 
         val navView: BottomNavigationView = binding.navView
 
-//        val navController = findNavController(R.id.nav_host_fragment_activity_main)
         val navController by lazy {
             val navHostFragment = supportFragmentManager
                 .findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment

@@ -25,7 +25,7 @@ class NASAInsightApplication : Application() {
                     networkModule,
                     repositoryModule,
                     useCaseModule,
-                    viewModelModule
+                    viewModelModule,
                 )
             )
         }

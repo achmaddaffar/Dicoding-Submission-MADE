@@ -11,4 +11,6 @@
     <string name="copyright_sample_text">This is copyright</string>
     <string name="favorite">Favorite</string>
     <string name="titile_favorites">Favorites</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="list_is_empty">List is empty</string>
 </resources>

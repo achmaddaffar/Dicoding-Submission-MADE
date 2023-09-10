@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class ApodEntity(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "apodId")
-    var apodId: Int= 0,
+    var apodId: Int? = null,
 
     @ColumnInfo(name = "date")
     var date: String? = null,
@@ -20,7 +20,7 @@ data class ApodEntity(
     var mediaType: String? = null,
 
     @ColumnInfo(name = "hdurl")
-    var hdurl: String,
+    var hdurl: String? = null,
 
     @ColumnInfo(name = "serviceVersion")
     var serviceVersion: String? = null,
@@ -32,7 +32,7 @@ data class ApodEntity(
     var title: String? = null,
 
     @ColumnInfo(name = "url")
-    var url: String,
+    var url: String? = null,
 
     @ColumnInfo(name = "isFavorite")
     var isFavorite: Boolean = false,

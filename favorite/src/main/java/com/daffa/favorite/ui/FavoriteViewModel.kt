@@ -1,4 +1,4 @@
-package com.daffa.nasainsight.ui.dashboard
+package com.daffa.favorite.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData

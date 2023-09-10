@@ -31,7 +31,7 @@ class ApodAdapter : RecyclerView.Adapter<ApodAdapter.ViewHolder>() {
                 Glide.with(itemView.context)
                     .load(data.url)
                     .centerCrop()
-                    .apply(RequestOptions().override(150, 100))
+                    .apply(RequestOptions().override(300, 200))
                     .into(ivItemImage)
                 tvItemTitle.text = data.title
                 tvItemDate.text = data.date

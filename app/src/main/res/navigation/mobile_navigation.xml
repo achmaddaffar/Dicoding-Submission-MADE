@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_favorite"
-        android:name="com.daffa.nasainsight.ui.dashboard.FavoriteFragment"
+        android:name="com.daffa.favorite.ui.FavoriteFragment"
         android:label="@string/titile_favorites"
         tools:layout="@layout/fragment_favorite" />
 

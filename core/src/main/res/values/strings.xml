@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Core</string>
+    <string name="app_name">NASAInsight</string>
     <string name="apod_description">Astronomy Picture of the Day</string>
     <string name="title_sample_text">This is Title</string>
     <string name="date_sample_text">This is Date</string>
