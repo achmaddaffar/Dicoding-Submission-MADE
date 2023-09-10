@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.daffa.core.R
 import com.daffa.core.databinding.ItemListApodBinding
 import com.daffa.core.domain.model.Apod
@@ -29,6 +30,8 @@ class ApodAdapter : RecyclerView.Adapter<ApodAdapter.ViewHolder>() {
             with(binding) {
                 Glide.with(itemView.context)
                     .load(data.url)
+                    .centerCrop()
+                    .apply(RequestOptions().override(150, 100))
                     .into(ivItemImage)
                 tvItemTitle.text = data.title
                 tvItemDate.text = data.date

@@ -2,4 +2,7 @@
 <resources>
     <string name="apod_list_desc">List of Astronomy Picture of the Day</string>
     <string name="data_is_empty">Data is Empty</string>
+    <string name="apod_image">Astronomy Picture of the Day</string>
+    <string name="copyright_sample_text">This is copyright</string>
+    <string name="favorite">Favorite</string>
 </resources>

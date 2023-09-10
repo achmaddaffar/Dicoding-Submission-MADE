@@ -40,6 +40,7 @@ class HomeFragment : Fragment() {
             val apodAdapter = ApodAdapter()
             apodAdapter.onItemClick = { selectedData ->
                 val intent = Intent(activity, DetailApodActivity::class.java)
+                intent.putExtra(DetailApodActivity.EXTRA_DATA, selectedData)
                 startActivity(intent)
             }
 
