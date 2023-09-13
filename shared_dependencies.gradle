@@ -8,14 +8,14 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
     implementation "androidx.multidex:multidex:$multidex_version"
 
-    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.6.0'
 
     implementation "androidx.cardview:cardview:$cardview_version"
     implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
     implementation "com.google.android.material:material:$material_version"
     implementation "com.github.bumptech.glide:glide:$glide_version"
 
-    //koin
+    // koin
     implementation "io.insert-koin:koin-android:$koin_version"
     // Java Compatibility
     implementation "io.insert-koin:koin-android-compat:$koin_version"
@@ -27,6 +27,10 @@ dependencies {
     implementation "androidx.security:security-crypto:1.1.0-alpha06"
     implementation 'com.scottyab:secure-preferences-lib:0.1.7'
 
+    // SQLite
     implementation "net.zetetic:android-database-sqlcipher:4.4.0"
     implementation "androidx.sqlite:sqlite-ktx:2.3.1"
+
+    // Shimmer
+    implementation "com.facebook.shimmer:shimmer:$shimmer_version"
 }

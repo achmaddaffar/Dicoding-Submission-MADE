@@ -9,6 +9,9 @@ import com.daffa.core.data.source.remote.network.ApiService
 import com.daffa.core.domain.repository.IApodRepository
 import com.daffa.core.utils.AppExecutors
 import com.daffa.core.utils.Constants
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
+import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.BuildConfig
@@ -21,12 +24,16 @@ import java.util.concurrent.TimeUnit
 val databaseModule = module {
     factory { get<ApodDatabase>().apodDao() }
     single {
+        val passphrase: ByteArray = SQLiteDatabase.getBytes("daffa".toCharArray())
+        val factory = SupportFactory(passphrase)
+
         Room.databaseBuilder(
             androidContext(),
             ApodDatabase::class.java,
             "Apod.db"
         )
             .fallbackToDestructiveMigration()
+            .openHelperFactory(factory)
             .build()
     }
 }
@@ -36,10 +43,15 @@ val networkModule = module {
     else HttpLoggingInterceptor.Level.NONE
 
     single {
+        val certificatePinner = CertificatePinner.Builder()
+            .add(Constants.HOST_NAME, "sha256/glI+B+hi4788ubQBCsdtgg0ljZEFx1UvBColxDnsec8=")
+            .build()
+
         OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().setLevel(loggingInterceptor))
-//            .connectTimeout(30, TimeUnit.SECONDS)
-//            .readTimeout(30, TimeUnit.SECONDS)
+            .connectTimeout(120, TimeUnit.SECONDS)
+            .readTimeout(120, TimeUnit.SECONDS)
+            .certificatePinner(certificatePinner)
             .build()
     }
 
