@@ -3,6 +3,7 @@ package com.daffa.core.ui
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -22,6 +23,16 @@ class ApodAdapter : RecyclerView.Adapter<ApodAdapter.ViewHolder>() {
         listData.clear()
         listData.addAll(newListData)
         notifyDataSetChanged()
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
+        ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_list_apod, parent, false))
+
+    override fun getItemCount(): Int = listData.size
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val data = listData[position]
+        holder.bind(data)
     }
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
@@ -44,15 +55,5 @@ class ApodAdapter : RecyclerView.Adapter<ApodAdapter.ViewHolder>() {
                 onItemClick?.invoke(listData[adapterPosition])
             }
         }
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
-        ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_list_apod, parent, false))
-
-    override fun getItemCount(): Int = listData.size
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val data = listData[position]
-        holder.bind(data)
     }
 }

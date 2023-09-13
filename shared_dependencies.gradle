@@ -24,4 +24,9 @@ dependencies {
     // Navigation Graph
     implementation "io.insert-koin:koin-androidx-navigation:$koin_version"
 
+    implementation "androidx.security:security-crypto:1.1.0-alpha06"
+    implementation 'com.scottyab:secure-preferences-lib:0.1.7'
+
+    implementation "net.zetetic:android-database-sqlcipher:4.4.0"
+    implementation "androidx.sqlite:sqlite-ktx:2.3.1"
 }

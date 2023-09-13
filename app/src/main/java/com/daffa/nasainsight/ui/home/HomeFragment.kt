@@ -5,18 +5,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.daffa.core.data.source.Resource
 import com.daffa.core.ui.ApodAdapter
 import com.daffa.nasainsight.R
 import com.daffa.nasainsight.databinding.FragmentHomeBinding
 import com.daffa.nasainsight.ui.detail.DetailApodActivity
-import com.google.android.play.core.splitinstall.SplitInstallManagerFactory
-import com.google.android.play.core.splitinstall.SplitInstallRequest
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
