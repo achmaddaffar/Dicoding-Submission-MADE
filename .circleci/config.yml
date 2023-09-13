@@ -6,7 +6,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cimg/openjdk:17.0
+      - image: cimg/android:2023.09
     executor: android/android
     steps:
       - checkout
