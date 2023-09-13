@@ -44,3 +44,7 @@ dependencies {
     implementation project(":core")
     implementation project(":app")
 }
+
+tasks.register("proguard_dependancy") {
+    exportReleaseConsumerProguardFiles.dependsOn extractProguardFiles
+}
