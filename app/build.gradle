@@ -44,6 +44,10 @@ android {
         viewBinding true
     }
     dynamicFeatures = [':favorite']
+
+    kotlin {
+        jvmToolchain(17)
+    }
 }
 
 dependencies {
