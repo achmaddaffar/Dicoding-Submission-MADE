@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.daffa.nasainsight.ui.detail
 
 import androidx.appcompat.app.AppCompatActivity

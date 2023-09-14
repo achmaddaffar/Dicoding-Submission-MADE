@@ -1,11 +1,4 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.NASAInsight" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorSecondary">@color/secondary</item>
-        <item name="colorSurface">@color/white</item>
-        <item name="colorAccent">@color/teal_200</item>
-    </style>
 
 </resources>

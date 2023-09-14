@@ -1,9 +1,9 @@
 package com.daffa.core.ui
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -16,6 +16,7 @@ class ApodAdapter : RecyclerView.Adapter<ApodAdapter.ViewHolder>() {
     private var listData = ArrayList<Apod>()
     var onItemClick: ((Apod) -> Unit)? = null
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setData(newListData: List<Apod>?) {
         if (newListData == null)
             return

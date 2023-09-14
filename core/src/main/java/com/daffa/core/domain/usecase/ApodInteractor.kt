@@ -1,6 +1,5 @@
 package com.daffa.core.domain.usecase
 
-import com.daffa.core.data.source.ApodRepository
 import com.daffa.core.data.source.Resource
 import com.daffa.core.domain.model.Apod
 import com.daffa.core.domain.repository.IApodRepository

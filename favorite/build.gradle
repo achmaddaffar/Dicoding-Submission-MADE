@@ -36,7 +36,3 @@ dependencies {
     implementation project(":core")
     implementation project(":app")
 }
-
-tasks.register("proguard_dependancy") {
-    ExtractProguardFilesTask.dependsOn ExportConsumerProguardFilesTask
-}
